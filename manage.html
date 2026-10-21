@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Nikolaos Anestakis"><meta name="description" content="Data Source careers website - Assignment 3"><title>Manage applications | Data Source</title><link rel="icon" href="images/favicon.png"><link rel="stylesheet" href="styles/style.css"><link rel="stylesheet" href="styles/hamburger.css"><link rel="stylesheet" href="styles/assignment3.css"><script src="scripts/apply.js" defer></script><script src="scripts/enhancements.js" defer></script><script src="scripts/portfolio.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><a href="index.html" class="site-brand"><img src="images/data-source-logo.png" alt="Data Source" class="site-logo"></a>
+<nav aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><button type="button" id="ds-menu-open" class="ds-menu-toggle" aria-label="Open navigation" aria-controls="ds-menu-drawer" aria-expanded="false"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button></header>
+<dialog id="ds-menu-drawer" class="ds-menu-drawer" aria-labelledby="ds-menu-title"><button type="button" id="ds-menu-close" class="ds-menu-toggle open" aria-label="Close navigation"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button><p id="ds-menu-title" class="ds-menu-heading">Data Source navigation</p><nav aria-label="Mobile navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><p class="ds-menu-footer">Technology. People. Possibility.</p></dialog><main id="main-content" class="site-main" tabindex="-1"><section class="page-banner page-banner--jobs"><div class="container"><h1>Manage applications</h1><p class="banner-description">Data Source application management demonstration.</p></div></section><section class="container enhancement-document"><div class="demo-notice"><p>Portfolio demonstration. All seeded applicants are fictional. Changes are saved only in this browser and do not update the hosted JSON file.</p><button type="button" id="reset-demo">Reset demonstration data</button></div>
+<h2>Expressions of interest</h2><p id="manager-message" role="status">Loading demonstration records...</p>
+<form id="manager-filters" class="manager-filters">
+<div><label for="filter-job">Job reference</label><input id="filter-job" name="jobReference"></div>
+<div><label for="filter-first">First name</label><input id="filter-first" name="firstName"></div>
+<div><label for="filter-last">Last name</label><input id="filter-last" name="lastName"></div>
+<div><label for="sort">Sort by</label><select id="sort" name="sort"><option value="EOInumber">EOI number</option><option value="jobReference">Job reference</option><option value="firstName">First name</option><option value="lastName">Last name</option><option value="Status">Status</option><option value="createdAt">Submitted</option></select></div>
+<div><label for="direction">Order</label><select id="direction" name="direction"><option value="ASC">Ascending</option><option value="DESC">Descending</option></select></div>
+<button type="submit">Filter applications</button><button type="reset">List all EOIs</button></form>
+<div class="table-scroll" role="region" aria-label="Application results" tabindex="0"><table class="eoi-table"><caption>Application records</caption><thead><tr><th scope="col">EOI</th><th scope="col">Job</th><th scope="col">Applicant</th><th scope="col">Contact</th><th scope="col">Address</th><th scope="col">Details</th><th scope="col">Status</th></tr></thead><tbody id="eoi-rows"></tbody></table></div>
+<section class="delete-panel"><h2>Delete applications for a position</h2><form id="delete-applications" class="manager-form"><label for="delete-reference">Job reference</label><input id="delete-reference" name="jobReference" maxlength="5" required><label><input type="checkbox" name="confirmed" required> I confirm deletion of all demonstration applications for this position.</label><button type="submit">Delete applications</button></form></section></section></main><footer class="site-footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="site-brand">
+
+                    <img src="images/data-source-logo-blue.png" alt="Data Source" class="footer-logo">
+
+                </a>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <section class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="jobs.html">Jobs</a>
+                    </li>
+
+                    <li>
+                        <a href="apply.html">Apply</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="enhancements.html">
+                            Enhancements
+                        </a>
+                    </li>
+
+                <li><a href="phpenhancements.html">Backend features</a></li><li><a href="manage.html">Manage applications</a></li></ul>
+
+            </section>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <h2>Contact</h2>
+
+                <p>
+
+                    <img src="images/icon-location-white.png" alt="" class="footer-icon">
+
+                    Melbourne, VIC, Australia
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Data Source. All rights reserved.
+            </p>
+
+            <p>
+                Delivering a smarter, data-driven tomorrow.
+            </p>
+
+        </div>
+
+    </footer></body></html>

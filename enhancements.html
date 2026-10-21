@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Nikolaos Anestakis"><meta name="description" content="Data Source careers website - Assignment 3"><title>Enhancements | Data Source</title><link rel="icon" href="images/favicon.png"><link rel="stylesheet" href="styles/style.css"><link rel="stylesheet" href="styles/hamburger.css"><link rel="stylesheet" href="styles/assignment3.css"><script src="scripts/apply.js" defer></script><script src="scripts/enhancements.js" defer></script><script src="scripts/portfolio.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><a href="index.html" class="site-brand"><img src="images/data-source-logo.png" alt="Data Source" class="site-logo"></a>
+<nav aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html" class="active" aria-current="page">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><button type="button" id="ds-menu-open" class="ds-menu-toggle" aria-label="Open navigation" aria-controls="ds-menu-drawer" aria-expanded="false"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button></header>
+<dialog id="ds-menu-drawer" class="ds-menu-drawer" aria-labelledby="ds-menu-title"><button type="button" id="ds-menu-close" class="ds-menu-toggle open" aria-label="Close navigation"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button><p id="ds-menu-title" class="ds-menu-heading">Data Source navigation</p><nav aria-label="Mobile navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html" class="active" aria-current="page">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><p class="ds-menu-footer">Technology. People. Possibility.</p></dialog><main id="main-content" class="site-main" tabindex="-1"><section class="page-banner page-banner--enhancements"><div class="container"><h1>Enhancements</h1><p class="banner-description">Explore the enhancements implemented beyond the baseline requirements.</p></div></section>
+
+        <!-- =================================================
+             ENHANCEMENTS PAGE BANNER
+             Introduces the purpose of the enhancements page.
+             The background image is supplied through the
+             enhancements banner rule in style.css.
+             ================================================= -->
+
+        
+
+
+        <!-- =================================================
+             RESPONSIVE DESIGN ENHANCEMENT
+             Full-width section provides the page background.
+             The nested container constrains the content width
+             and maintains the shared website gutters.
+             ================================================= -->
+
+        <section id="responsive-design">
+
+            <div class="container">
+
+                <header class="enhancement-intro">
+
+                    <h2>Responsive Design Enhancement</h2>
+
+                    <p>
+                        Fluid widths and layouts that resize or reflow are part of the assignment baseline.
+                        This enhancement is the additional breakpoint-specific CSS that structurally adapts
+                        components for smaller viewports rather than simply making them narrower.
+                    </p>
+
+                    <ul>
+                        <li><code>max-width: 900px</code> provides tablet adaptations.</li>
+                        <li><code>max-width: 48rem</code> provides mobile adaptations.</li>
+                        <li><code>max-width: 600px</code> provides small-mobile Jobs refinements.</li>
+                    </ul>
+
+                </header>
+
+
+                <section class="enhancement-device">
+
+                    <h3>Home Services</h3>
+
+                    <p>
+                        <strong>Desktop:</strong> the introduction and service items use a multi-column
+                        floated layout. <strong>Mobile:</strong> the floats are removed and each item becomes
+                        a full-width stacked block. The Join Our Team section is another implementation
+                        example: its side-by-side image and content become a vertical mobile layout.
+                    </p>
+
+                    <p>
+                        <a href="index.html">View the responsive Home page</a>
+                    </p>
+
+                    <pre><code>@media screen and (max-width: 48rem) {
+  .services-intro {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .service-item {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}</code></pre>
+
+                </section>
+
+
+                <section class="enhancement-device">
+
+                    <h3>Jobs</h3>
+
+                    <p>
+                        <strong>Desktop:</strong> job listings and the supporting aside use a 75/25 layout.
+                        <strong>Tablet:</strong> both become full-width stacked sections. On small-mobile
+                        displays, job metadata becomes vertical and each Apply button becomes full-width.
+                    </p>
+
+                    <p>
+                        <a href="jobs.html">View the responsive Jobs page</a>
+                    </p>
+
+                    <pre><code>@media screen and (max-width: 900px) {
+  .job-listings,
+  .jobs-aside {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .job-meta li {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .job-meta li:last-child {
+    margin-bottom: 0.95rem;
+  }
+
+  .job-apply .button {
+    width: 100%;
+    text-align: center;
+  }
+}</code></pre>
+
+                </section>
+
+
+                <section class="enhancement-device">
+
+                    <h3>Application Form</h3>
+
+                    <p>
+                        <strong>Desktop:</strong> form cards and form rows use multi-column layouts.
+                        <strong>Mobile:</strong> the floats are removed and card content, options and form
+                        groups become full-width blocks.
+                    </p>
+
+                    <p>
+                        <a href="apply.html#application-form">View the responsive application form</a>
+                    </p>
+
+                    <pre><code>@media screen and (max-width: 48rem) {
+  .application-form .form-card-heading {
+    float: none;
+    width: 100%;
+  }
+
+  .application-form .form-card-content,
+  .application-form .form-options {
+    float: none;
+    width: 100%;
+  }
+
+  .application-form .form-row .form-group,
+  .application-form .form-row-three .form-group,
+  .application-form .form-row .form-full {
+    float: none;
+    width: 100%;
+  }
+}</code></pre>
+
+                </section>
+
+
+                <section class="enhancement-device">
+
+                    <h3>About Personal Details</h3>
+
+                    <p>
+                        <strong>Desktop:</strong> the photograph appears beside the personal details.
+                        <strong>Mobile:</strong> the photograph moves above the full-width details list and
+                        is centred for the narrower viewport.
+                    </p>
+
+                    <p>
+                        <a href="about.html">View the responsive About page</a>
+                    </p>
+
+                    <pre><code>@media screen and (max-width: 48rem) {
+  .student-photo {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .student-details {
+    float: none;
+    width: 100%;
+  }
+}</code></pre>
+
+                </section>
+
+
+                <section class="enhancement-device">
+
+                    <h3>How to assess this enhancement</h3>
+
+                    <p>
+                        Open the linked examples and resize the browser across <code>900px</code>,
+                        <code>48rem</code> (approximately <code>768px</code>) and <code>600px</code>.
+                        The components change structure at these breakpoints rather than only resizing.
+                    </p>
+
+                </section>
+
+
+                <section class="enhancement-device">
+
+                    <h3>References</h3>
+
+                    <ul>
+                        <li>
+                            W3C,
+                            <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank" rel="noopener">Media Queries Level 4</a>
+                        </li>
+                        <li>
+                            MDN Web Docs,
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank" rel="noopener">Responsive web design</a>
+                        </li>
+                    </ul>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main><footer class="site-footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="site-brand">
+
+                    <img src="images/data-source-logo-blue.png" alt="Data Source" class="footer-logo">
+
+                </a>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <section class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="jobs.html">Jobs</a>
+                    </li>
+
+                    <li>
+                        <a href="apply.html">Apply</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="enhancements.html">
+                            Enhancements
+                        </a>
+                    </li>
+
+                <li><a href="phpenhancements.html">Backend features</a></li><li><a href="manage.html">Manage applications</a></li></ul>
+
+            </section>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <h2>Contact</h2>
+
+                <p>
+
+                    <img src="images/icon-location-white.png" alt="" class="footer-icon">
+
+                    Melbourne, VIC, Australia
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Data Source. All rights reserved.
+            </p>
+
+            <p>
+                Delivering a smarter, data-driven tomorrow.
+            </p>
+
+        </div>
+
+    </footer></body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Nikolaos Anestakis"><meta name="description" content="Data Source careers website - Assignment 3"><title>Enhancements2 | Data Source</title><link rel="icon" href="images/favicon.png"><link rel="stylesheet" href="styles/style.css"><link rel="stylesheet" href="styles/hamburger.css"><link rel="stylesheet" href="styles/assignment3.css"><script src="scripts/apply.js" defer></script><script src="scripts/enhancements.js" defer></script><script src="scripts/portfolio.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><a href="index.html" class="site-brand"><img src="images/data-source-logo.png" alt="Data Source" class="site-logo"></a>
+<nav aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html" class="active" aria-current="page">Enhancements2</a></li></ul></nav><button type="button" id="ds-menu-open" class="ds-menu-toggle" aria-label="Open navigation" aria-controls="ds-menu-drawer" aria-expanded="false"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button></header>
+<dialog id="ds-menu-drawer" class="ds-menu-drawer" aria-labelledby="ds-menu-title"><button type="button" id="ds-menu-close" class="ds-menu-toggle open" aria-label="Close navigation"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button><p id="ds-menu-title" class="ds-menu-heading">Data Source navigation</p><nav aria-label="Mobile navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html" class="active" aria-current="page">Enhancements2</a></li></ul></nav><p class="ds-menu-footer">Technology. People. Possibility.</p></dialog><main id="main-content" class="site-main" tabindex="-1"><section class="page-banner page-banner--enhancements"><div class="container"><h1>Enhancements2</h1><p class="banner-description">Helpful interactions built on the Data Source design.</p></div></section>
+
+<section class="container enhancement-document" aria-label="Enhancement documentation">
+<article><h2>1. Live application completion</h2><p>Open the <a href="apply.html#application-progress">application form</a> and fill its required fields. A progress meter updates after input or selection changes. It includes valid age and postcode checks and adds the Other skills description when selected.</p><p>Implementation: querySelector, input/change listeners and the native progress element in scripts/enhancements.js. This is guidance only; the private PHP endpoint performs the authoritative validation. Reset recalculates completion.</p></article>
+<article><h2>2. HamburgerElegant responsive navigation</h2><p>Resize the viewport below 1201px, then activate the animated navigation button. A full-screen drawer reveals the site links with a staggered entrance. Close with its button, Escape, or by selecting a link. Keyboard focus stays within the native modal dialog; closing returns focus to the menu button.</p><p>Implementation: external styles/hamburger.css and scripts/enhancements.js. The two-stage hamburger-to-cross animation and drawer reveal are adapted from <a href="https://github.com/NikolaosAnestakis/HamburgerElegant/blob/main/menudrawer.html">Nikolaos Anestakis, HamburgerElegant/menudrawer.html</a> (source blob 6f9f00aa9e1f98984213f942c32d90e5dcdca409).  No JavaScript libraries are used. Reduced-motion preferences are respected. With JavaScript unavailable, the original navigation remains visible.</p><p><a href="index.html#ds-menu-open">Try the responsive navigation</a>.</p></article><article><h2>Additional feature: optional application timer</h2><p>On the <a href="apply.html#enable-timer">application page</a>, enable the 20-minute timer. A visible warning appears with one minute left. Add 20 minutes using the warning button, or disable the timer at any time. Expiry returns to Home. The timer is off by default and Reset disables it.</p><p>Implementation: a Date.now deadline and setInterval in scripts/enhancements.js; the warning uses role=alert. It does not save an unfinished application. The extension button can be used repeatedly.</p></article>
+<article><h2>Sources and acknowledgements</h2><p>Design and assets: supplied Assignment1-DataSource project by Nikolaos Anestakis.  No third-party JavaScript libraries are included. Existing image and content credits are retained on the original enhancements page. Review the original asset licences before public publication.</p></article>
+</section></main><footer class="site-footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="site-brand">
+
+                    <img src="images/data-source-logo-blue.png" alt="Data Source" class="footer-logo">
+
+                </a>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <section class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="jobs.html">Jobs</a>
+                    </li>
+
+                    <li>
+                        <a href="apply.html">Apply</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="enhancements.html">
+                            Enhancements
+                        </a>
+                    </li>
+
+                <li><a href="phpenhancements.html">Backend features</a></li><li><a href="manage.html">Manage applications</a></li></ul>
+
+            </section>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <h2>Contact</h2>
+
+                <p>
+
+                    <img src="images/icon-location-white.png" alt="" class="footer-icon">
+
+                    Melbourne, VIC, Australia
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Data Source. All rights reserved.
+            </p>
+
+            <p>
+                Delivering a smarter, data-driven tomorrow.
+            </p>
+
+        </div>
+
+    </footer></body></html>

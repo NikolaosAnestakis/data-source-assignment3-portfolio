@@ -1,0 +1,653 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Nikolaos Anestakis"><meta name="description" content="Data Source careers website - Assignment 3"><title>Apply | Data Source</title><link rel="icon" href="images/favicon.png"><link rel="stylesheet" href="styles/style.css"><link rel="stylesheet" href="styles/hamburger.css"><link rel="stylesheet" href="styles/assignment3.css"><script src="scripts/apply.js" defer></script><script src="scripts/enhancements.js" defer></script><script src="scripts/portfolio.js" defer></script></head><body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><a href="index.html" class="site-brand"><img src="images/data-source-logo.png" alt="Data Source" class="site-logo"></a>
+<nav aria-label="Main navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html" class="active" aria-current="page">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><button type="button" id="ds-menu-open" class="ds-menu-toggle" aria-label="Open navigation" aria-controls="ds-menu-drawer" aria-expanded="false"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button></header>
+<dialog id="ds-menu-drawer" class="ds-menu-drawer" aria-labelledby="ds-menu-title"><button type="button" id="ds-menu-close" class="ds-menu-toggle open" aria-label="Close navigation"><span class="ds-menu-icon" aria-hidden="true"><span class="ds-menu-line ds-menu-top"></span><span class="ds-menu-line ds-menu-mid"></span><span class="ds-menu-line ds-menu-bottom"></span></span></button><p id="ds-menu-title" class="ds-menu-heading">Data Source navigation</p><nav aria-label="Mobile navigation"><ul><li><a href="index.html">Home</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="apply.html" class="active" aria-current="page">Apply</a></li><li><a href="about.html">About</a></li><li><a href="enhancements.html">Enhancements</a></li><li><a href="enhancements2.html">Enhancements2</a></li></ul></nav><p class="ds-menu-footer">Technology. People. Possibility.</p></dialog><main id="main-content" class="site-main apply-main" tabindex="-1"><section class="page-banner page-banner--apply"><div class="container"><h1>Apply for a position</h1><p class="banner-description">Join a team that values technology, collaboration and continuous growth.</p></div></section>
+
+
+        <!-- =====================================
+             APPLY BANNER
+             ===================================== -->
+
+        
+
+
+        <!-- =====================================
+             APPLICATION SECTION
+             ===================================== -->
+
+        <section class="application-section">
+
+            <div class="container">
+
+
+                <!-- =============================
+                     APPLICATION INTRO
+                     ============================= -->
+
+                <header class="application-intro">
+
+                    <p class="section-label">
+                        Application
+                    </p>
+
+                    <h2>Tell us about yourself</h2>
+
+                    <p>
+                        Complete the form below to apply for one of our
+                        current positions. All fields marked with an
+                        asterisk (<span class="required">*</span>) are required.
+                    </p>
+
+                </header>
+
+
+                <aside class="application-tools" aria-label="Application assistance">
+<p id="progress-caption">Application completion</p>
+<progress id="application-progress" value="0" max="1" aria-labelledby="progress-caption"></progress>
+<label><input type="checkbox" id="enable-timer"> Enable a 20-minute application timer</label>
+<p id="timer-clock">Timer off. Take the time you need.</p>
+<div id="timer-warning" role="alert" hidden>One minute remaining. Extend your time or turn off the timer to continue.
+<button id="extend-timer" type="button" class="button button-secondary">Add 20 minutes</button></div>
+</aside>
+<p id="application-status" role="status" tabindex="-1"></p>
+<p class="storage-notice">After a valid submission, your details are remembered in this tab for another application. Reset clears the saved details. Use fictional details when testing.</p>
+<noscript><p>JavaScript is required for the portfolio demonstration. The private PHP version also works without JavaScript.</p></noscript>
+<form id="application-form" class="application-form" method="post" action="apply.html" data-submission="demo" novalidate="novalidate">
+<div id="error-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+<div id="demo-outcome" class="demo-outcome" role="status" tabindex="-1" hidden></div>
+
+
+                    <!-- =============================
+                         PERSONAL INFORMATION
+                         ============================= -->
+
+                    <fieldset class="form-card">
+
+                        <legend class="visually-hidden">
+                            Personal Information
+                        </legend>
+
+
+                        <!-- =========================
+                             CARD HEADING
+                             ========================= -->
+
+                        <div class="form-card-heading">
+
+                            <img src="images/icon-person-apply.png" alt="" class="form-card-icon">
+
+                            <div class="form-card-title">
+
+                                <h2>
+                                    Personal Information
+                                </h2>
+
+                                <p>
+                                    Let us know your details.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             PERSONAL DETAILS FIELDS
+                             ========================= -->
+
+                        <div class="form-card-content">
+
+
+                            <!-- =====================
+                                 FIRST ROW
+                                 ===================== -->
+
+                            <div class="form-row form-row-three">
+
+
+                                <!-- Job Reference -->
+
+                                <div class="form-group">
+
+                                    <label for="jobReference">
+                                        Job Reference Number <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="jobReference" name="jobReference" maxlength="5"
+                                        pattern="[A-Za-z0-9]{5}" placeholder="e.g. 10000"
+                                        title="Enter exactly 5 letters and/or numbers" required>
+
+                                    <small>
+                                        Enter a five-character reference, or choose a position on the <a href="jobs.html">Jobs page</a>.
+                                    </small>
+
+                                </div>
+
+
+                                <!-- First Name -->
+
+                                <div class="form-group">
+
+                                    <label for="firstName">
+                                        First Name <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="firstName" name="firstName" maxlength="20"
+                                        pattern="[A-Za-z]{1,20}" placeholder="e.g. Nikolaos"
+                                        title="Enter alphabetic characters only" required>
+
+                                    <small>
+                                        Letters only, maximum 20 characters
+                                    </small>
+
+                                </div>
+
+
+                                <!-- Last Name -->
+
+                                <div class="form-group">
+
+                                    <label for="lastName">
+                                        Last Name <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="lastName" name="lastName" maxlength="20"
+                                        pattern="[A-Za-z]{1,20}" placeholder="e.g. Anestakis"
+                                        title="Enter alphabetic characters only" required>
+
+                                    <small>
+                                        Letters only, maximum 20 characters
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================
+                                 STREET ADDRESS
+                                 ===================== -->
+
+                            <div class="form-row">
+
+                                <div class="form-group form-full">
+
+                                    <label for="streetAddress">
+                                        Street Address <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="streetAddress" name="streetAddress" maxlength="40"
+                                        placeholder="e.g. 123 High Street" required>
+
+                                    <small>
+                                        Maximum 40 characters
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================
+                                 SUBURB / TOWN
+                                 ===================== -->
+
+                            <div class="form-row">
+
+                                <div class="form-group form-full">
+
+                                    <label for="suburbTown">
+                                        Suburb / Town <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="suburbTown" name="suburbTown" maxlength="40"
+                                        placeholder="e.g. Melbourne" required>
+
+                                    <small>
+                                        Maximum 40 characters
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================
+                                 POSTCODE AND STATE
+                                 ===================== -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="postcode">
+                                        Postcode <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}"
+                                        placeholder="e.g. 3071" title="Enter exactly 4 digits" required>
+
+                                    <small>
+                                        Exactly 4 digits
+                                    </small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="state">
+                                        State <span class="required">*</span>
+                                    </label>
+
+                                    <select id="state" name="state" required>
+
+                                        <option value="" selected disabled>
+                                            Please Select
+                                        </option>
+
+                                        <option value="VIC">VIC</option>
+                                        <option value="NSW">NSW</option>
+                                        <option value="QLD">QLD</option>
+                                        <option value="NT">NT</option>
+                                        <option value="WA">WA</option>
+                                        <option value="SA">SA</option>
+                                        <option value="TAS">TAS</option>
+                                        <option value="ACT">ACT</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================
+                                 EMAIL AND PHONE
+                                 ===================== -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email <span class="required">*</span>
+                                    </label>
+
+                                    <input type="email" id="email" name="email" placeholder="e.g. name@example.com"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        Phone Number <span class="required">*</span>
+                                    </label>
+
+                                    <input type="tel" id="phone" name="phone" minlength="8" maxlength="12"
+                                        pattern="[0-9 ]{8,12}" placeholder="e.g. 0412 345 678"
+                                        title="Enter 8 to 12 digits or spaces" required>
+
+                                    <small>
+                                        8 to 12 digits or spaces
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================
+                                 DATE OF BIRTH
+                                 ===================== -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="dateOfBirth">
+                                        Date of Birth <span class="required">*</span>
+                                    </label>
+
+                                    <input type="text" id="dateOfBirth" name="dateOfBirth" maxlength="10"
+                                        placeholder="dd/mm/yyyy"
+                                        pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                                        title="Enter your date of birth in dd/mm/yyyy format" required>
+
+                                    <small>
+                                        Please enter the date in the format
+                                        dd/mm/yyyy
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- =============================
+                         GENDER
+                         ============================= -->
+
+                    <fieldset class="form-card form-card-compact">
+
+                        <legend class="visually-hidden">
+                            Gender
+                        </legend>
+
+
+                        <!-- Card Heading -->
+
+                        <div class="form-card-heading">
+
+                            <img src="images/icon-gender-apply.png" alt="" class="form-card-icon">
+
+                            <div class="form-card-title">
+
+                                <h2>
+                                    Gender <span class="required">*</span>
+                                </h2>
+
+                                <p>
+                                    Select your gender.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Gender Options -->
+
+                        <div class="form-card-content form-options">
+
+                            <label>
+
+                                <input id="gender-male" type="radio" name="gender" value="Male" required>
+
+                                Male
+
+                            </label>
+
+
+                            <label>
+
+                                <input id="gender-female" type="radio" name="gender" value="Female">
+
+                                Female
+
+                            </label>
+
+
+                            <label>
+
+                                <input id="gender-non-binary" type="radio" name="gender" value="Non Binary">
+
+                                Non Binary
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- =============================
+                         SKILLS
+                         ============================= -->
+
+                    <fieldset class="form-card form-card-compact">
+
+                        <legend class="visually-hidden">
+                            Skills
+                        </legend>
+
+
+                        <!-- Card Heading -->
+
+                        <div class="form-card-heading">
+
+                            <img src="images/icon-skills-apply.png" alt="" class="form-card-icon">
+
+                            <div class="form-card-title">
+
+                                <h2>
+                                    Skills
+                                </h2>
+
+                                <p>
+                                    Select the skills that apply to you.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Skills Options -->
+
+                        <div class="form-card-content form-options skills-options">
+
+                            <label>
+
+                                <input type="checkbox" name="programming" value="Programming">
+
+                                Programming
+
+                            </label>
+
+
+                            <label>
+
+                                <input type="checkbox" name="networking" value="Networking">
+
+                                Networking
+
+                            </label>
+
+
+                            <label>
+
+                                <input type="checkbox" name="desktopSupport" value="Desktop Support">
+
+                                Desktop Support
+
+                            </label>
+
+
+                            <label>
+
+                                <input type="checkbox" name="otherSkillsSelected" value="Other skills">
+
+                                Other skills...
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- =============================
+                         ADDITIONAL INFORMATION
+                         ============================= -->
+
+                    <fieldset class="form-card">
+
+                        <legend class="visually-hidden">
+                            Additional Information
+                        </legend>
+
+
+                        <!-- Card Heading -->
+
+                        <div class="form-card-heading">
+
+                            <img src="images/icon-additional-information.png" alt="" class="form-card-icon">
+
+                            <div class="form-card-title">
+
+                                <h2>
+                                    Additional Information
+                                </h2>
+
+                                <p>
+                                    Tell us about any other relevant
+                                    skills or experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Additional Information -->
+
+                        <div class="form-card-content">
+
+                            <div class="form-group">
+
+                                <label for="otherSkills" class="visually-hidden">
+                                    Other skills
+                                </label>
+
+                                <textarea id="otherSkills" name="otherSkills" rows="6" cols="50"
+                                    placeholder="Leave a comment..."></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- =============================
+                         FORM ACTIONS
+                         ============================= -->
+
+                    <div class="form-actions">
+
+
+                        <!--
+                            Reset icon generated through CSS.
+
+                            File:
+                            images/icon-reset-blue.png
+                        -->
+
+                        <button type="reset" class="button button-secondary button-reset">
+                            Reset Form
+                        </button>
+
+
+                        <!--
+                            Apply icon generated through CSS.
+
+                            File:
+                            styles/images/icon-apply.png
+                        -->
+
+                        <button type="submit" class="button button-primary button-apply">
+                            Submit Application
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main><footer class="site-footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer Brand -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="site-brand">
+
+                    <img src="images/data-source-logo-blue.png" alt="Data Source" class="footer-logo">
+
+                </a>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <section class="footer-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="jobs.html">Jobs</a>
+                    </li>
+
+                    <li>
+                        <a href="apply.html">Apply</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="enhancements.html">
+                            Enhancements
+                        </a>
+                    </li>
+
+                <li><a href="phpenhancements.html">Backend features</a></li><li><a href="manage.html">Manage applications</a></li></ul>
+
+            </section>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <h2>Contact</h2>
+
+                <p>
+
+                    <img src="images/icon-location-white.png" alt="" class="footer-icon">
+
+                    Melbourne, VIC, Australia
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Data Source. All rights reserved.
+            </p>
+
+            <p>
+                Delivering a smarter, data-driven tomorrow.
+            </p>
+
+        </div>
+
+    </footer></body></html>

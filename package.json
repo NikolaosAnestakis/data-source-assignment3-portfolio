@@ -1,0 +1,8 @@
+{
+  "name": "data-source-assignment3-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Data Source Assignment 3 portfolio demonstration",
+  "scripts": {"test": "node tests/portfolio.cjs"},
+  "devDependencies": {"jsdom": "^26.0.0"}
+}

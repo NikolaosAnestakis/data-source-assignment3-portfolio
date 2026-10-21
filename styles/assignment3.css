@@ -1,0 +1,25 @@
+/* Assignment 3 shared sizing and management controls. */
+.skip-link { position: fixed; top: -8rem; left: 1rem; z-index: 10000; padding: .8rem 1rem; color: #073058; background: white; }
+.skip-link:focus { top: .5rem; }
+:focus-visible { outline: 3px solid #1769b3; outline-offset: 4px; }
+.page-banner, .page-banner--jobs { min-height: 22rem; padding: 3rem 0; box-sizing: border-box; }
+.page-banner h1, .page-banner--jobs h1 { font-size: clamp(2.5rem,4vw,3.5rem); line-height: 1.1; margin: 0; }
+.page-banner .banner-description, .page-banner--jobs .banner-description { font-size: 1rem; line-height: 1.55; max-width: 35rem; margin: .75rem 0 0; }
+.manager-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.manager-form { display: grid; gap: .8rem; max-width: 35rem; }
+.manager-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; padding: 1.5rem 0; }
+.manager-filters > div { display: grid; gap: .4rem; }
+.manager-form input:not([type=checkbox]), .manager-filters input, .manager-filters select, .eoi-table select { width: 100%; min-height: 2.75rem; padding: .6rem; border: 1px solid #617a91; border-radius: .25rem; font: inherit; background: white; color: #142e45; box-sizing: border-box; }
+.manager-form button, .manager-filters button, .eoi-table button { min-height: 2.75rem; padding: .6rem 1rem; font: inherit; cursor: pointer; }
+.table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid #d9dee5; }
+.eoi-table { width: 100%; border-collapse: collapse; min-width: 65rem; }
+.eoi-table caption { text-align: left; padding: 1rem; font-weight: bold; }
+.eoi-table td, .eoi-table th { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid #d9dee5; }
+.eoi-table thead { background: #eef5ff; }
+.eoi-table td p { font-size: .95rem; }
+.eoi-table td form { display: grid; gap: .5rem; }
+.delete-panel { margin-top: 3rem; padding: 1.5rem; border: 1px solid #b4c2d2; border-radius: .4rem; }
+.manager-message, .demo-notice { padding: 1rem; border-left: 4px solid #1769b3; background: #eef5ff; }
+[hidden] { display: none !important; }
+@media(max-width: 600px) { .page-banner, .page-banner--jobs { min-height: 19rem; padding: 2.5rem 0; } .manager-filters { display: grid; } .manager-filters > div { min-width: 0; } }
+@media(prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
