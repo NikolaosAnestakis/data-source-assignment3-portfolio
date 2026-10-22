@@ -123,3 +123,17 @@ html.ds-menu-ready { scrollbar-gutter: stable; }
 html.ds-menu-pointer .ds-menu-toggle:focus {
   outline: none;
 }
+
+/* The X stays unboxed, including when the dialog focuses it automatically. */
+#ds-menu-close,
+#ds-menu-close:focus,
+#ds-menu-close:focus-visible {
+  outline: none;
+  border: 0;
+  box-shadow: none;
+}
+/* Indicate keyboard focus through the icon rather than a surrounding square. */
+html:not(.ds-menu-pointer) #ds-menu-close:focus-visible .ds-menu-icon {
+  color: #073058;
+  filter: drop-shadow(0 0 2px currentColor);
+}
