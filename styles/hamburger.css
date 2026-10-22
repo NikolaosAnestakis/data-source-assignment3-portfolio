@@ -118,3 +118,8 @@ html.ds-menu-ready { scrollbar-gutter: stable; }
 
 /* Seventh navigation item: manager access. */
 .ds-menu-drawer nav li:nth-child(7) a { animation-delay: .3s; }
+
+/* Pointer interaction needs no ring; keyboard focus keeps the existing outline. */
+html.ds-menu-pointer .ds-menu-toggle:focus {
+  outline: none;
+}

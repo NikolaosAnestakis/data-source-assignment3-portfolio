@@ -68,6 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const closer = document.querySelector("#ds-menu-close");
   if (!opener || !drawer || !closer || typeof drawer.showModal !== "function") return;
   document.documentElement.classList.add("ds-menu-ready");
+  // Programmatic dialog focus can show a ring after a touch on iOS.
+  // Keep focus in place, and restore its visible ring for keyboard input.
+  document.addEventListener("pointerdown", () => {
+    document.documentElement.classList.add("ds-menu-pointer");
+  }, true);
+  document.addEventListener("keydown", () => {
+    document.documentElement.classList.remove("ds-menu-pointer");
+  }, true);
   const mobile = window.matchMedia("(max-width: 1200px)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let closing = false;
