@@ -23,3 +23,8 @@
 [hidden] { display: none !important; }
 @media(max-width: 600px) { .page-banner, .page-banner--jobs { min-height: 19rem; padding: 2.5rem 0; } .manager-filters { display: grid; } .manager-filters > div { min-width: 0; } }
 @media(prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+/* Keep the seven desktop navigation links on one line. */
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .site-header > nav ul { flex-wrap: nowrap; gap: 1rem; }
+}

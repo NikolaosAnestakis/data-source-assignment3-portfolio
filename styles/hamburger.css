@@ -115,3 +115,6 @@ html.ds-menu-ready { scrollbar-gutter: stable; }
   .ds-menu-drawer[open].ds-menu-closing { animation: none; }
 }
 
+
+/* Seventh navigation item: manager access. */
+.ds-menu-drawer nav li:nth-child(7) a { animation-delay: .3s; }
